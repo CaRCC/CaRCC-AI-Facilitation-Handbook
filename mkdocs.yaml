@@ -1,0 +1,12 @@
+site_name: The CaRCC AI Facilitation Handbook
+docs_dir: handbook
+nav:
+  - Handbook: index.md
+  - Resources: resources.md
+theme:
+  name: material
+plugins:
+  - search
+  - bibtex:
+      bib_file: refs.bib
+      bib_by_default: false
