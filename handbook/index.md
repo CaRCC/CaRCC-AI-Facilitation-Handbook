@@ -21,9 +21,8 @@ national organizations and initiatives such as CASC, the NSF AI Institutes, the
 NAIRR Pilot, and ACCESS. Collectively, these entities emphasize the need for
 strategic investments in cyberinfrastructure, workforce development, policy
 frameworks, and sustainable practices to enable effective, responsible AI
-adoption at scale [@boernerACCESSAdvancingInnovation2023;
-@bulekovaDynamicStateAI2024; @donlonNationalArtificialIntelligence2024;
-@StrengtheningDemocratizingUS2023; @USNAIRRPilot2024].
+adoption at scale
+[@boernerACCESSAdvancingInnovation2023; @bulekovaDynamicStateAI2024; @donlonNationalArtificialIntelligence2024; @StrengtheningDemocratizingUS2023; @USNAIRRPilot2024].
 
 To address the community needs, we surveyed the Campus Research Computing
 Consortium (CaRCC) AI Facilitation Interest Group [@CaRCCAIFacilitationIG].

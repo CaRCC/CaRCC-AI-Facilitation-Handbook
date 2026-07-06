@@ -13,8 +13,10 @@ nav:
   - Resources: resources.md
 theme:
   name: material
+markdown_extensions:
+  - footnotes
 plugins:
   - search
   - bibtex:
       bib_file: refs.bib
-      bib_by_default: false
+      bib_by_default: true
