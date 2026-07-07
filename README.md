@@ -26,8 +26,8 @@ mkdocs gh-deploy --remote-name carcc
 
 ## Acknowledgement
 
-To cite the [CaRCC's AI Faciliation Working Group's](https://carcc.org/ai-facilitation-materials-working-group/) Handbook on AI Faciliation:
+To cite the [CaRCC AI Faciliation Working Group's](https://carcc.org/ai-facilitation-materials-working-group/) Handbook on AI Faciliation:
 > Joshi, M., Alber, A., Briggs, L., García Mesa, J. J., Kamble, A., Michael, L., Middelkoop, T., Sarajlic, S., Sokovic, A. M., Valdez, J., & Zhang, Y. (2026). The AI Project Lifecycle: Implementation Strategies and Tools. Zenodo. https://doi.org/10.5281/zenodo.19121611
 
 PEARC'25 Paper presenting the concept framework:
-> Anna Alber, Laura Briggs, Paul Brunk, Manasvita Joshi, Atish P Kamble, Amira Kefi, Timothy Middelkoop, Semir Sarajlic, Ana Marija Sokovic, Jeffrey N Valdez, and Ying Zhang. 2025. AI Project Facilitation Guidance for Research Computing and Data (RCD) Professionals. In Practice and Experience in Advanced Research Computing 2025: The Power of Collaboration (PEARC '25). Association for Computing Machinery, New York, NY, USA, Article 70, 1–4. https://doi.org/10.1145/3708035.3736061
+> Alber, A., Briggs, L., Brunk, P., Joshi, M., Kamble, A., Kefi, A., Middelkoop, T., Sarajlic, S., Sokovic, A. M., Valdez, J., & Zhang, Y. 2025. AI Project Facilitation Guidance for Research Computing and Data (RCD) Professionals. In Practice and Experience in Advanced Research Computing 2025: The Power of Collaboration (PEARC '25). Association for Computing Machinery, New York, NY, USA, Article 70, 1–4. https://doi.org/10.1145/3708035.3736061
