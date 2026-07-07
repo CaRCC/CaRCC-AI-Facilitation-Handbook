@@ -13,11 +13,12 @@ project and across research domains.
 
 AI ethics is a multidisciplinary field concerned with the fair, accountable,
 transparent, safe, secure, and human-centered development and use of AI systems.
-One common organizing frame in responsible AI is FAccT, which emphasizes
-fairness, accountability, and transparency in sociotechnical systems. These
-principles are closely related to additional concerns such as privacy and data
-protection, safety and security, human rights, lifecycle governance, and
-community governance.
+One common organizing frame in responsible AI is FAccT
+[@lauferFourYearsFAccT2022], which emphasizes fairness, accountability, and
+transparency in sociotechnical systems. These principles are closely related to
+additional concerns such as privacy and data protection, safety and security,
+human rights, lifecycle governance, and community governance
+[@NISTAIRiskManagement2023].
 
 AI ethics is not a single checkpoint but a set of concerns that recur at every
 lifecycle stage, from problem definition through deployment and long-term
@@ -48,10 +49,10 @@ harms, or unexpected outcomes. From an RCD perspective, accountability is
 supported through auditability, provenance, and documentation: audit logs of
 experiment configurations, datasets, and results; version control for data,
 code, and model artifacts; documented approval pathways; and structured
-reporting such as model cards. These practices allow a team to trace biased,
-anomalous, or non-reproducible outcomes back to their source and assign clear
-ownership for remediation. See the Results & Reporting section for reporting and
-documentation practices.
+reporting such as model cards [@mitchellModelCardsModel2019]. These practices
+allow a team to trace biased, anomalous, or non-reproducible outcomes back to
+their source and assign clear ownership for remediation. See the Results &
+Reporting section for reporting and documentation practices.
 
 **Transparency and Explainability.** Transparency concerns whether the
 assumptions, data sources, methods, limitations, and decision pathways of an AI
@@ -61,8 +62,9 @@ meaningful for the research context. RCD facilitators can support transparency
 and explainability by encouraging version-controlled workflows, documented
 software environments, data and model provenance, experiment tracking,
 reproducible pipelines, and structured reporting artifacts such as model cards
-and datasheets. These practices help researchers explain not only what a model
-produced, but how the result was generated.
+[@mitchellModelCardsModel2019] and datasheets [@gebruDatasheetsDatasets2021].
+These practices help researchers explain not only what a model produced, but how
+the result was generated.
 
 **Privacy, Data Protection, Safety, and Security.** AI ethics also includes
 protecting people, communities, institutions, and research participants from
