@@ -1,9 +1,5 @@
 # CaRCC AI Facilitation Handbook
 
-*Working document — CaRCC AI Facilitation Materials.* Source: [RCD Taxonomy of
-AI
-Tasks](https://docs.google.com/presentation/d/1yiS4N5-iDLyFCJFe3XOI-M1yUq6akfSDH-Gl_yzm3kU/).
-
 ## Introduction
 
 Research Computing and Data (RCD) professionals encompass a broad community of
