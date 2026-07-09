@@ -84,7 +84,7 @@ lifecycle, introducing concrete implementation strategies that RCD facilitators
 can adopt, beginning with the foundational stage of any AI workflow: Problem
 Definition & Planning.
 
-![AI project lifecycle diagram](images/pearc_diagram_24_mar_2026.svg)
+![AI project lifecycle diagram](images/lifecycle_diagram_9_july_2026.svg)
 
 **Figure 1:** Conceptual illustration of AI project lifecycle stages from
 inception to completion.
