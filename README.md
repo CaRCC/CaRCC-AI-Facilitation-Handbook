@@ -21,7 +21,7 @@ mkdocs serve
 To deploy to GitHub run
 ```bash
 . ./.venv/bin/activate
-mkdocs gh-deploy --remote-name carcc
+mkdocs gh-deploy --remote-name origin
 ```
 
 ## Acknowledgement
