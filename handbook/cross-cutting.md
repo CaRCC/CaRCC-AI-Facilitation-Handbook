@@ -9,7 +9,7 @@ project and across research domains.
 > the source working document. Outline points are preserved here as blockquote
 > draft notes and still need to be written out.
 
-## a. AI Ethics
+## AI Ethics
 
 AI ethics is a multidisciplinary field concerned with the fair, accountable,
 transparent, safe, secure, and human-centered development and use of AI systems.
@@ -121,7 +121,7 @@ governance expectations are maintained.
 * OCAP®: <https://fnigc.ca/ocap-training/>
 * Ruster (2025): <https://doi.org/10.1609/aies.v8i3.36708>
 
-## b. Regulated Research, Risks, and Compliance
+## Regulated Research, Risks, and Compliance
 
 > **Draft note (outline).** This subsection is an outline in the source
 > document. Points to develop: introduction paragraphs pointing to RRCoP and
@@ -141,10 +141,7 @@ institutional and regulatory requirements. RCD facilitators help map these
 requirements to secure technical environments and enforce them through access
 controls and monitoring.
 
-## c. AI Platform Development as a Research Product
-
-> **Draft note.** Include AI-Ready Data (vs ML-ready data in the Data
-> Preparation section).
+## AI Platform Development as a Research Product
 
 RCD facilitators increasingly encounter researchers whose projects depend on
 shared AI platforms that the institution operates, such as centrally hosted
@@ -189,7 +186,7 @@ when no platform yet exists, is part of the facilitation role.
   standard for agentic platform interfaces. The vLLM and SGLang projects
   document reference architectures for self-hosted inference platforms.
 
-## d. Datacenter and Sustainability Considerations
+## Datacenter and Sustainability Considerations
 
 For researchers looking to purchase or write grants for new equipment, current
 data centers cannot support the most current and future GPU systems due to
@@ -232,22 +229,7 @@ training a foundation model and might need to be moved to the cloud.
 > type (e.g. one might prefer NVIDIA RTX 6000s for inference but not for
 > training compared to the latest Blackwells), citing the reason behind that.
 
-### Resource Allocation
-
-A lot of the time, supporting AI workflows could just mean figuring out a way to
-execute these on a cluster without disrupting other people's work. This could
-include creating a reservation, boosting a small list of jobs, or maybe even
-creating a temporary partition based on the requirements.
-
-> **Draft note.** It would be good to capture these techniques somewhere, as all
-> of that is an extension of our earlier paper.
-
-### Sustainability and Cost Optimization
-
-> **Draft note.** Might be good to mention executing some dry runs to generate
-> those metrics, if not already available.
-
-## e. Anti-Patterns in AI Project Facilitation
+## Anti-Patterns in AI Project Facilitation
 
 The previous sections discussed the tasks, tools, tips, and RCD involvement in
 each AI project lifecycle stage. Some challenges in AI project facilitation are
