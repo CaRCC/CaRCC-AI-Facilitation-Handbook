@@ -1,6 +1,7 @@
 site_name: The CaRCC AI Facilitation Handbook
 docs_dir: handbook
 nav:
+  - Authors & Acknowledgements: authors.md
   - Introduction: index.md
   - Problem Definition & Planning: problem-definition.md
   - Data Preparation: data-preparation.md
@@ -11,6 +12,9 @@ nav:
   - Results & Reporting: results-reporting.md
   - Cross-Cutting Considerations: cross-cutting.md
   - Resources: resources.md
+  - Contributing: contributing.md
+repo_url: https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook
+repo_name: CaRCC/CaRCC-AI-Facilitation-Handbook
 theme:
   name: material
 markdown_extensions:

@@ -90,15 +90,16 @@ revocation.
 **Indigenous Data Sovereignty.** Indigenous data sovereignty frameworks, such as
 CARE (Collective Benefit, Authority to Control, Responsibility, Ethics) and
 OCAP® (Ownership, Control, Access, Possession), should be considered throughout
-the AI research lifecycle (Ruster, 2025). These frameworks may affect how data
-is stored, accessed, reused, incorporated into model training workflows, and
-retained within derived model artifacts. RCD infrastructure and support services
-therefore play an important role in developing and supporting computing
-environments, storage architectures, and data management workflows that align
-with Indigenous-led governance requirements. Stewardship practices may also be
-needed to support data revocation. Where community-managed hosting is not
-feasible, custodianship arrangements may still be required to ensure that
-governance expectations are maintained.
+the AI research lifecycle [@rusterResponsibleAIPractices2025]. These frameworks
+may affect how data is stored, accessed, reused, incorporated into model
+training workflows, and retained within derived model artifacts. RCD
+infrastructure and support services therefore play an important role in
+developing and supporting computing environments, storage architectures, and
+data management workflows that align with Indigenous-led governance
+requirements. Stewardship practices may also be needed to support data
+revocation. Where community-managed hosting is not feasible, custodianship
+arrangements may still be required to ensure that governance expectations are
+maintained.
 
 *Resources*
 
