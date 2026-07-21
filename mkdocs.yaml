@@ -1,15 +1,15 @@
 site_name: The CaRCC AI Facilitation Handbook
 docs_dir: handbook
 nav:
-  - Handbook: index.md
-  - 2. Problem Definition & Planning: problem-definition.md
-  - 3. Data Preparation: data-preparation.md
-  - 4. Model Selection & Development: model-selection.md
-  - 5. Model Training & Tuning: model-training.md
-  - 6. Benchmarking, QC & Optimization: benchmarking.md
-  - 7. Model Application: model-application.md
-  - 8. Results & Reporting: results-reporting.md
-  - 9. Cross-Cutting Considerations: cross-cutting.md
+  - Introduction: index.md
+  - Problem Definition & Planning: problem-definition.md
+  - Data Preparation: data-preparation.md
+  - Model Selection & Development: model-selection.md
+  - Model Training & Tuning: model-training.md
+  - Benchmarking, QC & Optimization: benchmarking.md
+  - Model Application: model-application.md
+  - Results & Reporting: results-reporting.md
+  - Cross-Cutting Considerations: cross-cutting.md
   - Resources: resources.md
 theme:
   name: material
