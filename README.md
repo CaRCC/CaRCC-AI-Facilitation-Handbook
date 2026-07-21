@@ -18,7 +18,11 @@ And then run a local server available at http://localhost:8000
 mkdocs serve
 ```
 
-To deploy to GitHub run
+Deploys to GitHub Pages are automatic: a push to `main` that touches the
+handbook content, `mkdocs.yaml`, `refs.bib`, or `requirements.txt` triggers
+[`.github/workflows/docs.yml`](.github/workflows/docs.yml), which runs
+`mkdocs gh-deploy --force`. To deploy manually (e.g. to preview a build
+before merging) run
 ```bash
 . ./.venv/bin/activate
 mkdocs gh-deploy --remote-name origin
