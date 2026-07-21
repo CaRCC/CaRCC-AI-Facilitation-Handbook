@@ -44,8 +44,9 @@ issue.
 
 ## Authors
 
-The CaRCC AI Facilitation Handbook is a collaborative product of the CaRCC AI
-Facilitation Materials Working Group.
+The CaRCC AI Facilitation Handbook is a collaborative product of the [CaRCC AI
+Facilitation Materials Working
+Group](https://carcc.org/ai-facilitation-materials-working-group/).
 
 - Timothy Middelkoop, Ph.D. — Internet2 — ORCiD:
   [0000-0002-3183-3078](https://orcid.org/0000-0002-3183-3078)

@@ -1,9 +1,11 @@
 # Contributing
 
-This handbook reflects the collective experience of the CaRCC AI Facilitation
-Materials Working Group. It is not a finished product — corrections,
-clarifications, and new material from the broader RCD community are welcome and
-expected to keep it current as tools and practices evolve.
+This handbook reflects the collective experience of the [CaRCC AI Facilitation
+Materials Working
+Group](https://carcc.org/ai-facilitation-materials-working-group/). It is not
+a finished product — corrections, clarifications, and new material from the
+broader RCD community are welcome and expected to keep it current as tools and
+practices evolve.
 
 Before contributing, please read the [Introduction](index.md) to understand the
 handbook's scope and the AI project lifecycle framework it is organized around.
