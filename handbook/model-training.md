@@ -131,5 +131,5 @@ improving the training process.
   A short course by DeepLearning.AI teaching how to finetune large language
   models: when to use fine-tuning vs prompt engineering, how to prepare data,
   train, evaluate, and deploy your own LLM with updated weights.
-* [Deep Learning](http://deeplearningbook.org/) (Goodfellow, Bengio & Courville)
-  - The full text of this MIT Press book is freely available online
+* [Deep Learning](http://deeplearningbook.org/) (Goodfellow, Bengio &
+  Courville): the full text of this MIT Press book is freely available online
