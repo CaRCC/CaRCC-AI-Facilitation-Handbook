@@ -74,15 +74,19 @@ AI-based workflow on shared resources. In that context, this guide is most
 useful for RCD practitioners, and also valuable for researchers looking to
 understand infrastructure constraints and best practices.
 
-Through this guide, we aim to empower research teams to move from exploratory AI
-ideas to reliable, reproducible, scalable, and sustainable outcomes while
-balancing performance, cost, and the responsible use of shared resources. It is
-a co-creation model where researchers and RCD Facilitators interact continuously
-to balance performance, cost, security, and responsible use of shared resources.
-The remainder of this document details the constituent stages of the AI project
-lifecycle, introducing concrete implementation strategies that RCD facilitators
-can adopt, beginning with the foundational stage of any AI workflow: Problem
-Definition & Planning.
+Through this guide, we aim to empower research teams to move from
+exploratory AI ideas to reliable, reproducible, scalable, and
+sustainable outcomes while balancing performance, cost, and the
+responsible use of shared resources. It is a co-creation model where
+researchers and RCD Facilitators interact continuously to balance
+performance, cost, security, and responsible use of shared resources.
+The remainder of this document details the constituent stages of the
+AI project lifecycle, introducing concrete implementation strategies
+that RCD facilitators can adopt, beginning with the foundational stage
+of any AI workflow: Problem Definition & Planning. A summarized
+version of this guide, The AI Project Lifecycle: Implementation
+Strategies and Tools [@joshiAIProjectLifecycle2026], has already been
+published and is available on Zenodo.  
 
 ![AI project lifecycle diagram](images/lifecycle_diagram_9_july_2026_v2.svg)
 
