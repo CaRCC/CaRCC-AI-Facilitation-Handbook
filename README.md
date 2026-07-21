@@ -10,31 +10,6 @@ model development, benchmarking, deployment, and results reporting.
 Copyright 2026 CaRCC.
 Licensed CC BY-ND 4.0 https://creativecommons.org/licenses/by-nd/4.0/
 
-## Development
-
-Dependencies are listed in [requirements.txt](requirements.txt).
-
-To develop locally run the following to setup the software.
-```bash
-./setup.sh
-```
-
-And then run a local server available at http://localhost:8000
-```bash
-. ./.venv/bin/activate
-mkdocs serve
-```
-
-Deploys to GitHub Pages are automatic: a push to `main` that touches the
-handbook content, `mkdocs.yaml`, `refs.bib`, or `requirements.txt` triggers
-[`.github/workflows/docs.yml`](.github/workflows/docs.yml), which runs
-`mkdocs gh-deploy --force`. To deploy manually (e.g. to preview a build
-before merging) run
-```bash
-. ./.venv/bin/activate
-mkdocs gh-deploy --remote-name origin
-```
-
 ## Contributing
 
 Corrections, clarifications, and new material are welcome. See the
@@ -85,3 +60,28 @@ To cite the [CaRCC AI Faciliation Working Group's](https://carcc.org/ai-facilita
 
 PEARC'25 Paper presenting the concept framework:
 > Alber, A., Briggs, L., Brunk, P., Joshi, M., Kamble, A., Kefi, A., Middelkoop, T., Sarajlic, S., Sokovic, A. M., Valdez, J., & Zhang, Y. 2025. AI Project Facilitation Guidance for Research Computing and Data (RCD) Professionals. In Practice and Experience in Advanced Research Computing 2025: The Power of Collaboration (PEARC '25). Association for Computing Machinery, New York, NY, USA, Article 70, 1–4. https://doi.org/10.1145/3708035.3736061
+
+## Development
+
+Dependencies are listed in [requirements.txt](requirements.txt).
+
+To develop locally run the following to setup the software.
+```bash
+./setup.sh
+```
+
+And then run a local server available at http://localhost:8000
+```bash
+. ./.venv/bin/activate
+mkdocs serve
+```
+
+Deploys to GitHub Pages are automatic: a push to `main` that touches the
+handbook content, `mkdocs.yaml`, `refs.bib`, or `requirements.txt` triggers
+[`.github/workflows/docs.yml`](.github/workflows/docs.yml), which runs
+`mkdocs gh-deploy --force`. To deploy manually (e.g. to preview a build
+before merging) run
+```bash
+. ./.venv/bin/activate
+mkdocs gh-deploy --remote-name origin
+```
