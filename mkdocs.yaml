@@ -12,6 +12,7 @@ nav:
   - Results & Reporting: results-reporting.md
   - Cross-Cutting Considerations: cross-cutting.md
   - Resources: resources.md
+  - Contributing: contributing.md
 repo_url: https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook
 repo_name: CaRCC/CaRCC-AI-Facilitation-Handbook
 theme:

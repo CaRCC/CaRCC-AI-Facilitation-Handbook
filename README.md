@@ -35,6 +35,13 @@ before merging) run
 mkdocs gh-deploy --remote-name origin
 ```
 
+## Contributing
+
+Corrections, clarifications, and new material are welcome. See the
+[Contributing](https://carcc.github.io/CaRCC-AI-Facilitation-Handbook/contributing/)
+page for how to propose changes, whether by pull request or by opening an
+issue.
+
 ## Authors
 
 The CaRCC AI Facilitation Handbook is a collaborative product of the CaRCC AI
