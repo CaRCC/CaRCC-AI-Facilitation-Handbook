@@ -1,6 +1,7 @@
 site_name: The CaRCC AI Facilitation Handbook
 docs_dir: handbook
 nav:
+  - Authors & Acknowledgements: authors.md
   - Introduction: index.md
   - Problem Definition & Planning: problem-definition.md
   - Data Preparation: data-preparation.md
