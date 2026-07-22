@@ -14,10 +14,14 @@ Group](https://carcc.org/ai-facilitation-materials-working-group/).
   [0000-0003-1986-9921](https://orcid.org/0000-0003-1986-9921)
 - Laura Briggs, MS — Information Consultant — ORCiD:
   [0009-0000-8817-6745](https://orcid.org/0009-0000-8817-6745)
+- Juanjo García Mesa — Arizona State University — ORCiD:
+  [0009-0001-5267-5638](https://orcid.org/0009-0001-5267-5638)
 - Manasvita Joshi, Ph.D. — Harvard University — ORCiD:
   [0000-0003-1134-7352](https://orcid.org/0000-0003-1134-7352)
 - Atish P. Kamble, PhD — Boston University — ORCiD:
   [0000-0003-0861-5168](https://orcid.org/0000-0003-0861-5168)
+- Amira Kefi, PhD — University of Illinois Chicago — ORCiD:
+  [0000-0001-6703-3796](https://orcid.org/0000-0001-6703-3796)
 - Don Richards — Johns Hopkins University — ORCiD:
   [0000-0001-8137-5397](https://orcid.org/0000-0001-8137-5397)
 - Semir Sarajlic, MS — Vanderbilt University — ORCiD:
@@ -26,8 +30,6 @@ Group](https://carcc.org/ai-facilitation-materials-working-group/).
   [0000-0002-1407-7741](https://orcid.org/0000-0002-1407-7741)
 - Ying Zhang, MS — University of Florida — ORCiD:
   [0000-0003-4210-2104](https://orcid.org/0000-0003-4210-2104)
-- Amira Kefi, PhD — University of Illinois Chicago — ORCiD:
-  [0000-0001-6703-3796](https://orcid.org/0000-0001-6703-3796)
 
 ## Acknowledgement
 
