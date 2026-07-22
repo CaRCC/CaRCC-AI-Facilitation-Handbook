@@ -1,0 +1,1131 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../results-reporting/">
+      
+      
+        <link rel="next" href="../resources/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Cross-Cutting Considerations - The CaRCC AI Facilitation Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cross-cutting-considerations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The CaRCC AI Facilitation Handbook" class="md-header__button md-logo" aria-label="The CaRCC AI Facilitation Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The CaRCC AI Facilitation Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cross-Cutting Considerations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CaRCC/CaRCC-AI-Facilitation-Handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The CaRCC AI Facilitation Handbook" class="md-nav__button md-logo" aria-label="The CaRCC AI Facilitation Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The CaRCC AI Facilitation Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CaRCC/CaRCC-AI-Facilitation-Handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authors & Acknowledgements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem-definition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Definition & Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Selection & Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Training & Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarking, QC & Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Application
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results-reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results & Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-Cutting Considerations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-Cutting Considerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ethics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Ethics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulated-research-risks-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regulated Research, Risks, and Compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-platform-development-as-a-research-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Platform Development as a Research Product
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datacenter-and-sustainability-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datacenter and Sustainability Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datacenter and Sustainability Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpu-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-patterns-in-ai-project-facilitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anti-Patterns in AI Project Facilitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ethics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Ethics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulated-research-risks-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regulated Research, Risks, and Compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-platform-development-as-a-research-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Platform Development as a Research Product
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datacenter-and-sustainability-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datacenter and Sustainability Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datacenter and Sustainability Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpu-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-patterns-in-ai-project-facilitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anti-Patterns in AI Project Facilitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="cross-cutting-considerations">Cross-Cutting Considerations</h1>
+<p>Some considerations are not tied to any single stage of the AI project
+lifecycle. The subsections below outline concerns that recur throughout a
+project and across research domains.</p>
+<blockquote>
+<p><strong>Draft note:</strong> Several subsections below (particularly <em>Regulated Research</em>
+and <em>Datacenter and Sustainability Considerations</em>) remain in outline form in
+the source working document. Outline points are preserved here as blockquote
+draft notes and still need to be written out.</p>
+</blockquote>
+<h2 id="ai-ethics">AI Ethics</h2>
+<p>AI ethics is a multidisciplinary field concerned with the fair, accountable,
+transparent, safe, secure, and human-centered development and use of AI systems.
+One common organizing frame in responsible AI is FAccT
+<sup id="fnref:lauferFourYearsFAccT2022"><a class="footnote-ref" href="#fn:lauferFourYearsFAccT2022">1</a></sup>, which emphasizes fairness, accountability, and
+transparency in sociotechnical systems. These principles are closely related to
+additional concerns such as privacy and data protection, safety and security,
+human rights, lifecycle governance, and community governance
+<sup id="fnref:NISTAIRiskManagement2023"><a class="footnote-ref" href="#fn:NISTAIRiskManagement2023">2</a></sup>.</p>
+<p>AI ethics is not a single checkpoint but a set of concerns that recur at every
+lifecycle stage, from problem definition through deployment and long-term
+stewardship. For RCD facilitators, the practical contribution is rarely to set
+ethical policy directly. Instead, RCD facilitators help build and coordinate the
+technical and operational conditions that make ethical commitments enforceable:
+auditable infrastructure, documented data provenance, access controls,
+reproducible workflows, appropriate evaluation environments, and connections to
+institutional offices responsible for compliance, privacy, security, and
+research integrity. The subsections below outline core areas RCD facilitators
+should be prepared to support.</p>
+<p><strong>Fairness, Non-Discrimination, and Bias.</strong> Fairness concerns whether AI systems
+perform equitably across relevant groups, populations, contexts, or use cases.
+Bias can enter at multiple stages, including data collection, labeling,
+preprocessing, model selection, evaluation, deployment, and interpretation. RCD
+decisions around data, software, platforms, and infrastructure can introduce,
+amplify, or help mitigate bias at the data, model, and evaluation stages. RCD
+facilitators can help researchers select and run tooling to detect disparate
+performance across subgroups and ensure evaluation environments are
+representative, documented, and reproducible. See the Benchmarking and Results &amp;
+Reporting sections for fairness, interpretability, and reporting tooling.</p>
+<p><strong>Accountability and Responsibility.</strong> Fairness and the other goals in this
+section remain aspirational unless a project team can show how a result was
+produced, who made key decisions, and who is responsible for addressing errors,
+harms, or unexpected outcomes. From an RCD perspective, accountability is
+supported through auditability, provenance, and documentation: audit logs of
+experiment configurations, datasets, and results; version control for data,
+code, and model artifacts; documented approval pathways; and structured
+reporting such as model cards <sup id="fnref:mitchellModelCardsModel2019"><a class="footnote-ref" href="#fn:mitchellModelCardsModel2019">3</a></sup>. These practices
+allow a team to trace biased, anomalous, or non-reproducible outcomes back to
+their source and assign clear ownership for remediation. See the Results &amp;
+Reporting section for reporting and documentation practices.</p>
+<p><strong>Transparency and Explainability.</strong> Transparency concerns whether the
+assumptions, data sources, methods, limitations, and decision pathways of an AI
+system are documented and accessible to appropriate stakeholders. Explainability
+concerns whether model behavior and outputs can be interpreted in ways that are
+meaningful for the research context. RCD facilitators can support transparency
+and explainability by encouraging version-controlled workflows, documented
+software environments, data and model provenance, experiment tracking,
+reproducible pipelines, and structured reporting artifacts such as model cards
+<sup id="fnref2:mitchellModelCardsModel2019"><a class="footnote-ref" href="#fn:mitchellModelCardsModel2019">3</a></sup> and datasheets <sup id="fnref:gebruDatasheetsDatasets2021"><a class="footnote-ref" href="#fn:gebruDatasheetsDatasets2021">4</a></sup>.
+These practices help researchers explain not only what a model produced, but how
+the result was generated.</p>
+<p><strong>Privacy, Data Protection, Safety, and Security.</strong> AI ethics also includes
+protecting people, communities, institutions, and research participants from
+inappropriate data exposure, misuse, or harm. For RCD facilitators, this means
+helping researchers recognize when an AI project may involve sensitive,
+regulated, proprietary, or otherwise restricted data; when model artifacts or
+outputs may preserve sensitive information; and when safety or security risks
+may require institutional review. Detailed guidance on regulated research,
+secure environments, data governance, and compliance is addressed in the next
+subsection.</p>
+<p><strong>Long-term Stewardship.</strong> Stewardship addresses what happens to research
+artifacts after a project closes, including retention, preservation, continued
+access control, reproducibility, archival responsibilities, and deletion
+obligations. AI projects may produce derived artifacts such as trained models,
+embeddings, logs, annotations, containers, workflow metadata, or evaluation
+outputs that continue to carry governance, privacy, reproducibility, or
+intellectual property implications after the original data processing is
+complete. Where data is governed by external frameworks or agreements,
+stewardship may also require custodianship arrangements and support for data
+revocation.</p>
+<p><strong>Indigenous Data Sovereignty.</strong> Indigenous data sovereignty frameworks, such as
+CARE (Collective Benefit, Authority to Control, Responsibility, Ethics) and
+OCAP® (Ownership, Control, Access, Possession), should be considered throughout
+the AI research lifecycle <sup id="fnref:rusterResponsibleAIPractices2025"><a class="footnote-ref" href="#fn:rusterResponsibleAIPractices2025">5</a></sup>. These frameworks
+may affect how data is stored, accessed, reused, incorporated into model
+training workflows, and retained within derived model artifacts. RCD
+infrastructure and support services therefore play an important role in
+developing and supporting computing environments, storage architectures, and
+data management workflows that align with Indigenous-led governance
+requirements. Stewardship practices may also be needed to support data
+revocation. Where community-managed hosting is not feasible, custodianship
+arrangements may still be required to ensure that governance expectations are
+maintained.</p>
+<p><em>Resources</em></p>
+<ul>
+<li>ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT):
+  <a href="https://facctconference.org/">https://facctconference.org/</a></li>
+<li>Laufer et al. (2022), "Four Years of FAccT: A Reflexive, Mixed-Methods
+  Analysis of Research Contributions, Shortcomings, and Future Prospects":
+  <a href="https://doi.org/10.1145/3531146.3533107">https://doi.org/10.1145/3531146.3533107</a></li>
+<li>A practical checklist from the EU that helps teams ask concrete questions
+  about seven ethical requirements for AI projects (2019, pp. 26–31). The final
+  2020 version is less straightforward of a read:
+  <a href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai</a></li>
+<li>NIST AI Risk Management Framework (AI RMF):
+  <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a></li>
+<li>Mitchell et al. (2019), "Model Cards for Model Reporting":
+  <a href="https://doi.org/10.1145/3287560.3287596">https://doi.org/10.1145/3287560.3287596</a></li>
+<li>Gebru et al. (2021), "Datasheets for Datasets":
+  <a href="https://doi.org/10.1145/3458723">https://doi.org/10.1145/3458723</a></li>
+<li>CARE Principles: <a href="https://doi.org/10.5334/dsj-2020-043">https://doi.org/10.5334/dsj-2020-043</a></li>
+<li>OCAP®: <a href="https://fnigc.ca/ocap-training/">https://fnigc.ca/ocap-training/</a></li>
+<li>Ruster (2025): <a href="https://doi.org/10.1609/aies.v8i3.36708">https://doi.org/10.1609/aies.v8i3.36708</a></li>
+</ul>
+<h2 id="regulated-research-risks-and-compliance">Regulated Research, Risks, and Compliance</h2>
+<blockquote>
+<p><strong>Draft note (outline).</strong> This subsection is an outline in the source
+document. Points to develop: introduction paragraphs pointing to RRCoP and
+similar resources for further detail; categories of regulated data and
+research and their requirements (e.g. regulated vs restricted; FERPA, HIPAA,
+PHI/PII, export control, controlled unclassified); characteristics of secure
+research environments (see the Internet2 "model" for secure research
+environments
+<a href="https://internet2.edu/tag/secure-research-environments-series/">series</a>); and
+AI/ML technologies for data and model security, with pointers to external
+resources or examples.</p>
+</blockquote>
+<p><strong>Data Governance.</strong> Governance covers the policies and controls applied to
+research data while a project is active: ownership, permissions, classification
+and sensitivity (PII, PHI, CUI, FERPA, DUA), access control, and compliance with
+institutional and regulatory requirements. RCD facilitators help map these
+requirements to secure technical environments and enforce them through access
+controls and monitoring.</p>
+<h2 id="ai-platform-development-as-a-research-product">AI Platform Development as a Research Product</h2>
+<p>RCD facilitators increasingly encounter researchers whose projects depend on
+shared AI platforms that the institution operates, such as centrally hosted
+Large Language Model (LLM) services, Retrieval-Augmented Generation (RAG)
+infrastructure, vector databases, model registries, and agentic frameworks.
+These platforms behave as research products in their own right, with users,
+releases, service expectations, and evolution driven by the projects that
+consume them. Holding this cross-cutting view helps facilitators support
+researchers at several lifecycle stages.</p>
+<p><strong>Where to run an AI platform.</strong> At problem definition, facilitators can help
+researchers consider where their AI platform should run: on an institutional
+shared platform, on a national resource such as the National AI Research
+Resource (NAIRR) or ACCESS, on a commercial platform, or on project-built
+infrastructure. The choice affects what cost, governance, and operational burden
+the project carries versus what a platform absorbs, and is worth surfacing early
+rather than after the project has committed to a path.</p>
+<p><strong>Application as ongoing service.</strong> At model application, platforms are ongoing
+services rather than endpoints. Traditional Machine Learning (ML) platforms are
+typically refreshed by retraining on newer data, while foundation-model
+platforms additionally cycle through base-model upgrades, fine-tuning (often via
+Parameter-Efficient Fine-Tuning (PEFT) techniques such as Low-Rank Adaptation
+(LoRA)), continued pre-training, and re-embedding of indexed corpora.
+Researchers should be encouraged to record which platform versions they used,
+since results may not be reproducible once the platform evolves underneath them.</p>
+<p>Facilitators are also well placed to recognize when a researcher's emerging
+needs suggest platform thinking should be applied: recurring requests for vector
+search, embedding generation, or fine-tuning; sensitive data routed to
+commercial Application Programming Interfaces (APIs) for lack of a self-hosted
+alternative; or multiple groups duplicating similar infrastructure. In those
+situations, connecting researchers to the platform team, or surfacing the gap
+when no platform yet exists, is part of the facilitation role.</p>
+<p><em>Resources</em></p>
+<ul>
+<li><em>Designing Machine Learning Systems</em> by Chip Huyen offers practical patterns
+  for ML platform engineering applicable to research contexts. The MLflow Model
+  Registry documentation describes one approach to model lifecycle and
+  versioning. The Model Context Protocol (MCP) specification is an emerging open
+  standard for agentic platform interfaces. The vLLM and SGLang projects
+  document reference architectures for self-hosted inference platforms.</li>
+</ul>
+<h2 id="datacenter-and-sustainability-considerations">Datacenter and Sustainability Considerations</h2>
+<p>For researchers looking to purchase or write grants for new equipment, current
+data centers cannot support the most current and future GPU systems due to
+power, cooling and space requirements. This is also the case for labs and
+offices as power, cooling, heat, and noise are becoming serious issues for
+people that are in the labs. Multiple systems also should consider high speed
+and low latency networks (InfiniBand) to spread tasks across multiple systems
+and to access high speed storage. Researchers need to work closely with Research
+IT, who in turn need to coordinate closely with Enterprise IT and the Datacenter
+to ensure compatibility with the infrastructure; you can no longer just "plug
+in" a server. Researchers and Facilitators must recognize that equipment lead
+times can be multiple years and require building and campus power and cooling
+upgrades.</p>
+<blockquote>
+<p><strong>Draft note (outline).</strong> Points to develop in this subsection: a quick
+overview of when a system crosses over from "desktop" to data-center, and from
+"server" to big AI box (rack density — a typical enterprise IT rack supports
+machines up to some limit per U; most GPU boxes exceed it); networking
+(InfiniBand is power hungry and GPU boxes often use one IB card per GPU); fast
+storage and how it is more expensive than "a bunch of spinning disks"; power
+limits (high voltage systems, AI data centers needing substation upgrades,
+grid reliability issues, full UPS for transients); direct liquid cooling; heat
+rejection (chiller, cooling tower, heat exchanger) and sustainability; and a
+wrap-up that it is too late to plan once you have bought it, and your system
+might be out of date by the time you can turn it on.</p>
+</blockquote>
+<h3 id="gpu-capabilities">GPU Capabilities</h3>
+<p>Sometimes the types of GPUs available to an institution could depend on their
+data center infrastructure, in terms of the type of cooling supported there. If
+a center supports only air cooling then that might restrict the type of GPUs
+that can be made available to their users. This could add to the overall cost of
+training a foundation model and might need to be moved to the cloud.</p>
+<blockquote>
+<p><strong>Draft note.</strong> Should air- vs liquid-cooling support be stated more
+explicitly as one of the factors for what users can or cannot do on a cluster?
+It would be good to include a discussion on what types of GPUs are suitable
+for training vs inference, broadly relating the various types of AI workflows
+to GPU architectures — general principles for connecting a workflow to a GPU
+type (e.g. one might prefer NVIDIA RTX 6000s for inference but not for
+training compared to the latest Blackwells), citing the reason behind that.</p>
+</blockquote>
+<h2 id="anti-patterns-in-ai-project-facilitation">Anti-Patterns in AI Project Facilitation</h2>
+<p>The previous sections discussed the tasks, tools, tips, and RCD involvement in
+each AI project lifecycle stage. Some challenges in AI project facilitation are
+not tied to any single stage of the lifecycle. These anti-patterns are observed
+throughout the project and across research domains. Addressing them early can
+help both researchers and RCD facilitators avoid pitfalls, compliance issues,
+and unsustainable solutions.</p>
+<p><strong>Anti-Patterns for researchers:</strong></p>
+<ul>
+<li>Treat RCD as a help desk rather than a strategic partner in project planning,
+  proposal preparation, and execution.</li>
+<li>Engage RCD only after local resources, commercial cloud credits, or ad hoc
+  solutions have been exhausted.</li>
+<li>Purchase cloud resources before understanding data transfer, storage,
+  security, licensing, and long-term operational costs.</li>
+<li>Assume that successful execution on a laptop and workstation implies
+  scalability, reproducibility, or production readiness.</li>
+<li>Move sensitive or restricted data before assessing risks and confirming
+  compliance with data governance, privacy, and institutional policies and
+  requirements.</li>
+<li>Build workflows around a single individual's account, system, or undocumented
+  environment.</li>
+<li>Focus only on model accuracy while overlooking reproducibility,
+  interpretability, fairness, operational costs, sustainability, and regulatory
+  requirements.</li>
+<li>Underestimate the effort and time required for data management, risk
+  assessment, software engineering, documentation, monitoring, and maintenance.</li>
+<li>Select technologies based on popularity or novelty rather than project
+  requirements, available resources, and sustainability considerations.</li>
+</ul>
+<p><strong>Anti-Patterns for RCD facilitators:</strong></p>
+<ul>
+<li>Consider themselves solely as infrastructure providers rather than
+  collaborators in proposal development, project scoping, and planning.</li>
+<li>Focus exclusively on technical solutions without understanding research or
+  educational objectives.</li>
+<li>Emphasize infrastructure limitations instead of helping researchers find
+  feasible alternatives.</li>
+<li>Treat AI projects same as other HPC workloads without considering AI-specific
+  workflows and requirements.</li>
+<li>Assume researchers understand institutional policies, security requirements,
+  and RCD resources and services.</li>
+<li>Provision computing resources without understanding project requirements,
+  support expectations, or a sustainability plan.</li>
+<li>Consider primarily system utilization metrics while neglecting researcher's
+  productivity, usability, and scientific outcomes.</li>
+</ul>
+<p><strong>Anti-Patterns for both researchers and RCDs:</strong></p>
+<ul>
+<li>Defer the discussions and decisions about governance, compliance,
+  sustainability, and operational ownership until late in the project.</li>
+<li>Fail to establish shared expectations regarding costs, timelines, team roles,
+  responsibilities, and success criteria.</li>
+<li>Optimize for immediate results without consideration of maintainability,
+  reproducibility, and sustainability.</li>
+<li>Overlook the importance of total cost of ownership, storage growth,
+  maintenance, and future upgrades.</li>
+<li>Treat reproducibility and documentation as activities after publication or
+  deployment.</li>
+</ul>
+<p>AI project failures can result from delayed RCD engagement, inadequate planning,
+and neglect of compliance and governance. Early partnership between researchers
+and RCD facilitators is essential to reduce the risks and ensure successful
+project execution and sustainable outcomes.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:lauferFourYearsFAccT2022">
+<p>Benjamin Laufer, Sameer Jain, A. Feder Cooper, Jon Kleinberg, and Hoda Heidari. Four years of FAccT: a reflexive, mixed-methods analysis of research contributions, shortcomings, and future prospects. In <em>2022 ACM Conference on Fairness, Accountability, and Transparency (FAccT '22)</em>, 401–426. ACM, 2022. <a href="https://doi.org/10.1145/3531146.3533107">doi:10.1145/3531146.3533107</a>.&#160;<a class="footnote-backref" href="#fnref:lauferFourYearsFAccT2022" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:NISTAIRiskManagement2023">
+<p>National Institute of Standards and Technology (NIST). Artificial intelligence risk management framework (AI RMF 1.0). Technical Report NIST AI 100-1, National Institute of Standards and Technology, January 2023. URL: <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a>, <a href="https://doi.org/10.6028/NIST.AI.100-1">doi:10.6028/NIST.AI.100-1</a>.&#160;<a class="footnote-backref" href="#fnref:NISTAIRiskManagement2023" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mitchellModelCardsModel2019">
+<p>Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, and Timnit Gebru. Model cards for model reporting. In <em>Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19)</em>, 220–229. ACM, 2019. <a href="https://doi.org/10.1145/3287560.3287596">doi:10.1145/3287560.3287596</a>.&#160;<a class="footnote-backref" href="#fnref:mitchellModelCardsModel2019" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:mitchellModelCardsModel2019" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gebruDatasheetsDatasets2021">
+<p>Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé III, and Kate Crawford. Datasheets for datasets. <em>Communications of the ACM</em>, 64(12):86–92, 2021. <a href="https://doi.org/10.1145/3458723">doi:10.1145/3458723</a>.&#160;<a class="footnote-backref" href="#fnref:gebruDatasheetsDatasets2021" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rusterResponsibleAIPractices2025">
+<p>Lorenn P. Ruster. Responsible AI practices: histories, definitions, barriers and future directions. <em>Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society</em>, 8(3):2227–2241, 2025. <a href="https://doi.org/10.1609/aies.v8i3.36708">doi:10.1609/aies.v8i3.36708</a>.&#160;<a class="footnote-backref" href="#fnref:rusterResponsibleAIPractices2025" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

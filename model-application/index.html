@@ -1,0 +1,1150 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../benchmarking/">
+      
+      
+        <link rel="next" href="../results-reporting/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Model Application - The CaRCC AI Facilitation Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model-application" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The CaRCC AI Facilitation Handbook" class="md-header__button md-logo" aria-label="The CaRCC AI Facilitation Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The CaRCC AI Facilitation Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model Application
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CaRCC/CaRCC-AI-Facilitation-Handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The CaRCC AI Facilitation Handbook" class="md-nav__button md-logo" aria-label="The CaRCC AI Facilitation Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The CaRCC AI Facilitation Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CaRCC/CaRCC-AI-Facilitation-Handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authors & Acknowledgements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem-definition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Definition & Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Selection & Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Training & Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarking, QC & Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Application
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Application
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-specific-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of Specific Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-tasks-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Tasks and Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-are-rcd-resources-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When Are RCD Resources Needed?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-challenges-implications-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Challenges, Implications, &amp; Solutions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips, Tricks, and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected Learning Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results-reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results & Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross-cutting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-Cutting Considerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-specific-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of Specific Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-tasks-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Tasks and Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-are-rcd-resources-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When Are RCD Resources Needed?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-challenges-implications-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Challenges, Implications, &amp; Solutions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips, Tricks, and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected Learning Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="model-application">Model Application</h1>
+<h2 id="definition">Definition</h2>
+<p>Model Application packages and deploys a trained model with its dependencies and
+integrates it into a production or research environment where it can serve end
+users or downstream systems by performing inference on new data. It includes
+managing infrastructure and computational resources for <strong>batch (B)</strong>,
+<strong>interactive (I)</strong>, or <strong>real-time (RT) execution modes</strong>, along with
+monitoring, versioning, and scaling to ensure reliability, performance, and
+compliance within research and operational workflows.</p>
+<p>Platform-level concerns (shared institutional AI platforms, AI-ready data,
+ongoing service lifecycle) are addressed in <a href="../cross-cutting/">Cross-Cutting
+Considerations</a>, AI Platform Development as a Research
+Product.</p>
+<h2 id="examples-of-specific-tasks">Examples of Specific Tasks</h2>
+<ul>
+<li>Creating a chatbot or AI agent using a trained model to provide real-time
+  responses for research or user-facing applications.</li>
+<li>Running a climate prediction model overnight on HPC batch resources to
+  generate ensemble forecasts.</li>
+<li>Deploying an NLP model in an interactive JupyterHub session for text
+  annotation experiments.</li>
+<li>Hosting a real-time image classification model on an edge device for a lab's
+  microscopy pipeline.</li>
+<li>Using a container registry to launch a model inference service for genomics
+  workflows.</li>
+</ul>
+<h2 id="user-tasks-and-tools">User Tasks and Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Task Area</th>
+<th>Description</th>
+<th>Tools/Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B, I</strong></td>
+<td><strong>Model Inference for Simulations and Research Analysis</strong></td>
+<td>Run trained AI or ML models to generate predictions or insights across scientific simulations and data-driven research workflows.</td>
+<td>TensorFlow, PyTorch, Slurm, Apptainer/Singularity</td>
+</tr>
+<tr>
+<td><strong>B, I</strong></td>
+<td><strong>Model Packaging and Environment Setup</strong></td>
+<td>Bundle trained models with their dependencies, configurations, and runtime environments to ensure portability and reproducibility across HPC, cloud, and edge systems.</td>
+<td>Apptainer/Singularity, Docker, Conda, MLflow Models, ONNX</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td><strong>Data-Processing Pipelines</strong></td>
+<td>Schedule or automated processing of research datasets.</td>
+<td>Apache Spark MLlib, Apptainer/Singularity</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td><strong>Web-based model testing</strong></td>
+<td>On-demand testing of models in browser or web app.</td>
+<td>Jupyter Notebook/JupyterLab, Hugging Face Spaces</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td><strong>Interactive visualization</strong></td>
+<td>Explore and interpret model results visually.</td>
+<td>JupyterHub/JupyterLab, TensorBoard, Weights &amp; Biases (W&amp;B), Streamlit/Dash</td>
+</tr>
+<tr>
+<td><strong>RT</strong></td>
+<td><strong>API-based predictions</strong></td>
+<td>Ad-hoc predictions and queries via API.</td>
+<td>FastAPI, BentoML, Flask, KServe, Seldon</td>
+</tr>
+<tr>
+<td><strong>RT</strong></td>
+<td><strong>Robotics (lab automation, drones)</strong></td>
+<td>Low-latency model inference for robotics or automated equipment.</td>
+<td>TensorFlow Serving, NVIDIA Triton, ONNX Runtime</td>
+</tr>
+<tr>
+<td><strong>RT</strong></td>
+<td><strong>Autonomous systems</strong></td>
+<td>Immediate decision-making in self-driving, sensor networks, etc.</td>
+<td>TorchServe, Kubernetes, ONNX Runtime</td>
+</tr>
+<tr>
+<td><strong>RT</strong></td>
+<td><strong>Conversational AI Tools</strong></td>
+<td>Domain-specific chatbots or assistants with instant responses.</td>
+<td>Hugging Face Inference API, NVIDIA Triton, Ollama, vLLM, LiteLLM</td>
+</tr>
+<tr>
+<td><strong>B, I, RT</strong></td>
+<td><strong>Model Management and Monitoring</strong></td>
+<td>Track, version, and monitor model performance and lifecycle across batch, interactive, and real-time deployments to ensure reliability, reproducibility, and continuous improvement (for project-deployed models; platform-managed models are addressed in the Cross-Cutting section)</td>
+<td>MLflow, ClearML, W&amp;B, Neptune.ai</td>
+</tr>
+</tbody>
+</table>
+<h2 id="when-are-rcd-resources-needed">When Are RCD Resources Needed?</h2>
+<ul>
+<li>Models outgrow local resources<ul>
+<li>Large or scaling models (e.g., serving a self-hosted Large Language Model
+  for project use) exceed workstation or single-GPU setups</li>
+<li>High compute, memory, or storage demands (e.g., multi-GPU training,
+  distributed inference, vector databases) require RCD-managed HPC or cloud
+  resources.</li>
+</ul>
+</li>
+<li>Workflow management and automation<ul>
+<li>Manual pipelines are too slow.</li>
+<li>Batch automation or distributed inference needed for tasks like nightly
+  retraining.</li>
+</ul>
+</li>
+<li>Real-time inference performance becomes essential<ul>
+<li>Low-latency applications are required like wildfire-mapping drones or
+  autonomous robotics.</li>
+<li>RCD resources enable real-time inference through accelerators and
+  orchestration platforms.</li>
+</ul>
+</li>
+<li>Compliance and security constraints<ul>
+<li>Projects subject to regulatory or institutional oversight require secure
+  environments and controlled access.</li>
+<li>Projects with HIPAA, CUI, or GDPR constraints require isolated HPC or
+  cloud environments aligned with compliance standards.</li>
+<li>Studies under IRB approval may fall within lower-security enclaves but
+  still require RCD-managed resources for proper data handling, auditing,
+  and access control.</li>
+</ul>
+</li>
+</ul>
+<h2 id="rcd-challenges-implications-solutions">RCD Challenges, Implications, &amp; Solutions</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Challenge</th>
+<th>RCD Implication</th>
+<th>Solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Infrastructure &amp; Hardware</strong></td>
+<td><strong>Containerization &amp; Batch Processing</strong></td>
+<td>Work with researchers to support diverse research workflows that require scalable, reproducible execution across HPC and cloud environments.</td>
+<td>Use Slurm for scheduled batch jobs on HPC and Kubernetes or Apptainer/Singularity for containerized and scalable model serving.</td>
+</tr>
+<tr>
+<td><strong>Infrastructure &amp; Hardware</strong></td>
+<td><strong>Storage &amp; I/O</strong></td>
+<td>Balance user performance expectations with infrastructure limits when large datasets create I/O contention.</td>
+<td>Leverage specialized storage systems (e.g., VAST, NetApp) designed for mixed AI workloads and provide user guidance on data staging.</td>
+</tr>
+<tr>
+<td><strong>Infrastructure &amp; Hardware</strong></td>
+<td><strong>Networking &amp; Latency</strong></td>
+<td>Coordinate with network teams to ensure sufficient bandwidth and placement for low-latency AI workloads.</td>
+<td>Use high-bandwidth interconnects (InfiniBand, 100/200 GbE), edge runtimes (ONNX Runtime, TensorRT), and optimized job placement for robotics, drones, and conversational AI.</td>
+</tr>
+<tr>
+<td><strong>Software &amp; Workflows</strong></td>
+<td><strong>Frameworks &amp; Platforms</strong></td>
+<td>Maintain scalable inference frameworks appropriate for researchers while supporting varied user familiarity and environments.</td>
+<td>Offer maintained installations of TensorFlow Serving, TorchServe, and ONNX Runtime for consistent, supported deployment options.</td>
+</tr>
+<tr>
+<td><strong>Software &amp; Workflows</strong></td>
+<td><strong>User Interfaces &amp; Accessibility</strong></td>
+<td>Lower the barrier for researchers to test and deploy models, including LLMs, interactively without complex DevOps setup.</td>
+<td>Provide Hugging Face Inference API, Ollama, JupyterHub/JupyterLab, and Streamlit/Dash for accessible model testing and sharing.</td>
+</tr>
+<tr>
+<td><strong>Governance &amp; Operations</strong></td>
+<td><strong>Security Compliance</strong></td>
+<td>Help interpret and implement security and data compliance standards for regulated projects.</td>
+<td>Ensure HIPAA/GDPR/CUI compliance through encryption at rest/in transit and isolated, policy-aligned compute environments.</td>
+</tr>
+<tr>
+<td><strong>Governance &amp; Operations</strong></td>
+<td><strong>Lifecycle Monitoring</strong></td>
+<td>Help researchers ensure models remain auditable, versioned, and reproducible across their lifecycle.</td>
+<td>Recommend using MLflow and ClearML to automate tracking, versioning, and drift monitoring for deployed models.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tips-tricks-and-troubleshooting">Tips, Tricks, and Troubleshooting</h2>
+<ul>
+<li>Prevent idle resource waste<ul>
+<li>Actively monitor batch and real-time jobs.</li>
+<li>Adjust schedules and resources to minimize GPU waste.</li>
+</ul>
+</li>
+<li>Optimize early for deployment needs<ul>
+<li>Profile and optimize on target hardware early, since deployment hardware
+  may differ from training systems.</li>
+<li>Tune batch sizes, threading, and model precision during inference to match
+  production environments.</li>
+<li>Reduce latency by placing jobs close to data (node locality, caching
+  strategies).</li>
+<li>Test inference batch sizes to balance throughput vs. response time for
+  real-time applications.</li>
+</ul>
+</li>
+<li>Plan storage and tracking from the start<ul>
+<li>Use parallel file systems for large data I/O (e.g., training checkpoints).</li>
+<li>For metadata-heavy workloads like Anaconda or Python virtual environments,
+  use local SSDs on compute nodes or storage like NetApp or VAST.</li>
+<li>Version models and experiments early with MLflow and ClearML.</li>
+</ul>
+</li>
+<li>Monitor and update deployed models<ul>
+<li>Continuously track performance, drift, and fairness over time.</li>
+<li>Schedule periodic retraining or model refreshes to maintain accuracy and
+  compliance.</li>
+<li>Integrate lifecycle monitoring tools (e.g., MLflow, ClearML) to ensure
+  reproducibility and reliability across the model's lifecycle.</li>
+</ul>
+</li>
+<li>For models consumed through shared institutional platforms, update cadence and
+  version tracking are typically platform responsibilities (see the
+  Cross-Cutting section).</li>
+</ul>
+<h2 id="rcd-considerations">RCD Considerations</h2>
+<ul>
+<li>Compute and orchestration<ul>
+<li>Match the deployment method to reliability, latency, and scaling
+  requirements (e.g., batch jobs on HPC clusters, interactive notebooks,
+  REST APIs, or edge devices).</li>
+<li>Use CPUs for low-throughput batch jobs, GPUs/accelerators for
+  high-throughput or low-latency tasks.</li>
+<li>Containerize models (Apptainer, Docker) and manage with Slurm or
+  Kubernetes.</li>
+<li>Incorporate resilience mechanisms such as liveness probes, auto-restart
+  policies, and cached fallback models during deployment to maintain service
+  continuity and recover from failures or GPU shortages.</li>
+</ul>
+</li>
+<li>Storage and I/O<ul>
+<li>Parallel file systems for large model/data I/O (Lustre).</li>
+<li>Object stores, NVMe SSDs, or vector DBs for real-time or metadata-heavy
+  workloads (e.g., VAST).</li>
+</ul>
+</li>
+<li>Network and latency<ul>
+<li>Optimize interconnects (InfiniBand, high-speed Ethernet) to reduce
+  inference bottlenecks.</li>
+<li>Use node locality and caching strategies to minimize data transfer
+  overhead for real-time tasks.</li>
+</ul>
+</li>
+<li>Security and compliance<ul>
+<li>Encrypt data at rest/in transit.</li>
+<li>Deploy HIPAA, GDPR, or CUI-aligned environments with secure APIs and
+  access controls.</li>
+</ul>
+</li>
+<li>Monitoring and efficiency<ul>
+<li>Track drift and performance (MLflow, ClearML, or Weights &amp; Biases).</li>
+<li>Apply quotas and scheduling to ensure fairness and minimize idle GPU use.</li>
+</ul>
+</li>
+</ul>
+<h2 id="selected-learning-resources">Selected Learning Resources</h2>
+<ul>
+<li><a href="https://slurm.schedmd.com/quickstart.html">Slurm Quick Start Guide</a> -
+  Step-by-step intro to running batch jobs on HPC</li>
+<li><a href="https://jupyterhub.readthedocs.io/en/stable/">JupyterHub Documentation</a> -
+  Deploying interactive AI workflows at scale</li>
+<li><a href="https://pytorch.org/serve/tutorials.html">TorchServe Tutorials</a> - Examples
+  for serving PyTorch models in production</li>
+<li><a href="https://www.tensorflow.org/tfx/guide/serving">TensorFlow Serving Guide</a> -
+  Steps for deploying TensorFlow models with REST/gRPC APIs</li>
+<li><a href="https://developer.nvidia.com/nvidia-triton-inference-server">NVIDIA Triton Inference Server
+  Tutorials</a> -
+  Walkthroughs for deploying scalable inference on GPUs/CPUs</li>
+<li><a href="https://mlflow.org/docs/latest/tutorials-and-examples/index.html">MLflow
+  Tutorials</a> -
+  How-to guides for tracking, packaging, and deploying models</li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management
+  Framework</a> - Practical
+  guidance for compliant, trustworthy AI deployment</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

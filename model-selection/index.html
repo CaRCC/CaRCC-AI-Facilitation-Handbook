@@ -1,0 +1,1032 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../data-preparation/">
+      
+      
+        <link rel="next" href="../model-training/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Model Selection & Development - The CaRCC AI Facilitation Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model-selection-andor-development" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The CaRCC AI Facilitation Handbook" class="md-header__button md-logo" aria-label="The CaRCC AI Facilitation Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The CaRCC AI Facilitation Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model Selection & Development
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CaRCC/CaRCC-AI-Facilitation-Handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The CaRCC AI Facilitation Handbook" class="md-nav__button md-logo" aria-label="The CaRCC AI Facilitation Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The CaRCC AI Facilitation Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CaRCC/CaRCC-AI-Facilitation-Handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CaRCC/CaRCC-AI-Facilitation-Handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authors & Acknowledgements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem-definition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Definition & Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Selection & Development
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Selection & Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-specific-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of Specific Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-are-rcd-resources-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When Are RCD Resources Needed?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-challenges-implications-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Challenges, Implications, &amp; Solutions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips, Tricks, and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected Learning Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Training & Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmarking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarking, QC & Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Application
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results-reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results & Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross-cutting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-Cutting Considerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-specific-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of Specific Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-are-rcd-resources-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When Are RCD Resources Needed?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-challenges-implications-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Challenges, Implications, &amp; Solutions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips, Tricks, and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected Learning Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="model-selection-andor-development">Model Selection and/or Development</h1>
+<h2 id="definition">Definition</h2>
+<p>Foundation Model Selection and/or Development is the process of identifying,
+creating, training, and optimizing large-scale neural network architectures that
+serves as the basis for the project's various AI applications. Work typically
+includes:</p>
+<ul>
+<li>Evaluating existing foundation models - including Large Language Models (LLMs)
+  and vision or multimodal models - and their license agreements (open
+  weight/open source)</li>
+<li>Collecting and preprocessing massive datasets in preparation for large-scale
+  model training, while adhering to the data management plan.</li>
+<li>Designing or adapting model architectures (with hundreds of millions or
+  trillions of parameters), or tuning existing foundation models.</li>
+<li>Comprehensive AI Model Evaluation.</li>
+</ul>
+<h2 id="examples-of-specific-tasks">Examples of Specific Tasks</h2>
+<ul>
+<li>Decision: Select/Adopt an existing foundational model, ensuring its licensing
+  terms permit the project's intended aims, or develop a new model if necessary.</li>
+<li>Selecting a pre-trained Time-Series Transformer model architecture and
+  adapting it for integration into an existing HPC batch process to generate
+  ensemble forecasts for regional climate prediction</li>
+<li>Adapting a general Whisper model by fine-tuning it on a secured GPU cluster
+  with a proprietary dataset of legal depositions to achieve high accuracy when
+  automatically transcribing highly specialized legal terminology</li>
+<li>Fine-tuning an open foundation model, such as Llama 3.x, using PEFT/LoRA
+  techniques on internal scientific literature hosted on RCD-managed object
+  store to create a domain-specific conversational AI tool for summarizing
+  research findings</li>
+<li>Evaluate model for bias with a medical language model (like BERT) using tools
+  like Fairlearn and RCD-provided JupyterHub to ensure equal prediction accuracy
+  across diverse patient groups before deployment</li>
+<li>Creating a standardized Model Card for a fine-tuned ResNet model used in
+  microscopic image classification, documenting key parameters, performance
+  metrics (precision-recall), and publishing it through an RCD-supported data
+  repository</li>
+</ul>
+<h2 id="when-are-rcd-resources-needed">When Are RCD Resources Needed?</h2>
+<p>RCD resources become essential in several AI development and deployment phases:</p>
+<p><strong>Pre-Training Phase:</strong></p>
+<ul>
+<li>When assembling domain-specific data beyond public datasets</li>
+<li>When privacy/security concerns prohibit using commercial cloud platforms</li>
+<li>When dataset size exceeds typical departmental storage capabilities</li>
+</ul>
+<p><strong>Fine-Tuning Stage:</strong></p>
+<ul>
+<li>When adapting models like Llama 2 to institutional research domains</li>
+<li>When implementing PEFT/LoRA techniques on specialized datasets</li>
+<li>When balancing between Notebook/Google Colab and full cluster-scale approaches</li>
+<li>Executing distributed training across GPU/TPU clusters</li>
+</ul>
+<p><strong>Evaluation &amp; Iteration:</strong></p>
+<ul>
+<li>When developing rigorous domain-specific benchmarks</li>
+<li>When computing comprehensive bias/fairness metrics</li>
+</ul>
+<p><strong>Deployment &amp; Maintenance:</strong></p>
+<ul>
+<li>When model serving requires continuous data refreshing</li>
+<li>When building inference pipelines with research data integration</li>
+</ul>
+<p><strong>Collaboration &amp; Scaling:</strong></p>
+<ul>
+<li>When coordinating multi-institution data sharing initiatives</li>
+<li>When bridging on-prem resources with cloud academic grants</li>
+</ul>
+<h2 id="rcd-challenges-implications-solutions">RCD Challenges, Implications, &amp; Solutions</h2>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Implications</th>
+<th>Solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training New Foundation Models from Scratch</td>
+<td>Parameters: Billions to trillions; Data requirements: Petabytes of data; Computational resources: Multiple thousands of GPU/TPU hours; Training time and cost: Weeks to months, millions of dollars</td>
+<td>Leveraging Open Weight Models; Using cloud academic infrastructure grants; Parameter-efficient fine-tuning methods</td>
+</tr>
+<tr>
+<td>Model Selection Complexity</td>
+<td>Different models (GPT-4, Claude, Gemini, LLaMA) have varying capabilities and resource requirements. Systematic evaluation frameworks</td>
+<td>Domain-specific benchmarking; Balancing performance vs. resource constraints</td>
+</tr>
+<tr>
+<td>Limited Computational Resources</td>
+<td>Makes full model training impractical for most institutions; Restricts scope of AI research projects</td>
+<td>Parameter-efficient methods (LoRA); Cloud Academic Infrastructure: Google, IBM, AWS/VAST/Azure/NVIDIA/NAIRR grants; Gradient accumulation techniques</td>
+</tr>
+<tr>
+<td>Data Privacy and Security</td>
+<td>Sensitive research data cannot use commercial platforms; Regulatory compliance issues</td>
+<td>On-premises HPC solutions; Secure data preprocessing pipelines; Privacy-preserving fine-tuning approaches</td>
+</tr>
+<tr>
+<td>Model Deployment Scale</td>
+<td>Full-scale models require significant inference resources</td>
+<td>Model quantization; Distributed inference architectures; Weights &amp; Biases for tracking experiment performance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tips-tricks-and-troubleshooting">Tips, Tricks, and Troubleshooting</h2>
+<ul>
+<li>Evaluate foundation model options thoroughly: Consider GPT series, BERT,
+  Claude, Gemini, and LLaMA models based on your specific research needs and
+  available resources</li>
+<li>Start with open foundation models access through Hugging Face Hub, Llama 2,
+  Falcon, BLOOM, Ollama, or vLLM before attempting to train from scratch</li>
+<li>For smaller experiments with limited budgets, utilize Colab Pro or Kaggle
+  before scaling to institutional resources. This staged approach preserves
+  costly HPC allocations for production-scale training and lowers the barrier to
+  entry for researchers new to AI workflows.</li>
+<li>When fine-tuning large models, leverage parameter-efficient techniques like
+  PEFT/LoRA combined with memory optimization frameworks such as DeepSpeed or
+  PyTorch FSDP to reduce memory requirements</li>
+<li>Use experiment tracking tools like Weights &amp; Biases to monitor training
+  progress and model performance</li>
+<li>For multimodal applications, consider specialized models like DALL-E, Stable
+  Diffusion, or Flamingo rather than building custom solutions. For example,
+  generating images from textual descriptions.</li>
+<li>When computational resources are limited, consider leveraging pre-trained
+  weights rather than training from scratch, as this can reduce data
+  requirements from petabytes to gigabytes or terabytes</li>
+</ul>
+<h2 id="rcd-considerations">RCD Considerations</h2>
+<ul>
+<li>Model Selection Framework: Choose between general-purpose models (GPT-4,
+  Claude, Gemini) versus specialized models (AlphaCode, BloombergGPT) based on
+  research domain requirements</li>
+<li>Computational Resource Planning: Assess whether fine-tuning (dozens to
+  hundreds of GPUs) versus full training (thousands of GPUs/TPUs) is appropriate
+  for research goals</li>
+<li>Data Infrastructure Requirements: Evaluate storage needs ranging from
+  gigabytes (for fine-tuning) to petabytes (for pre-training)</li>
+<li>Model Adaptation Strategy: Determine if parameter-efficient adaptation
+  techniques can meet research needs versus full model re-training</li>
+<li>Cross-institutional Collaboration: Consider data sharing initiatives and
+  resource pooling for projects exceeding single-institution capabilities</li>
+<li>Deployment Environment: Balance between cloud academic infrastructure (Google,
+  AWS, Azure) and on-premises solutions based on data privacy requirements and
+  computational needs</li>
+</ul>
+<h2 id="selected-learning-resources">Selected Learning Resources</h2>
+<ul>
+<li>Selected Models<ul>
+<li><a href="https://arxiv.org/abs/1706.03762">Transformer</a> (NLP),
+  <a href="https://arxiv.org/abs/1810.04805">BERT</a> (NLP),
+  <a href="https://arxiv.org/abs/2303.08774">GPT-4</a> (NLP),
+  <a href="https://arxiv.org/abs/2302.13971">Llama</a> (NLP),
+  <a href="https://arxiv.org/abs/2310.06825">Mistral</a> (NLP),
+  <a href="https://arxiv.org/abs/1512.03385">ResNet</a> (computer vision),
+  <a href="https://arxiv.org/abs/1506.02640">YOLO</a> (computer vision),
+  <a href="https://arxiv.org/abs/2010.11929">ViT</a> (computer vision),
+  <a href="https://openai.com/index/dall-e/">DALL-E</a> (Text to image),
+  <a href="https://arxiv.org/abs/2212.04356">Whisper</a> (Audio to text),
+  <a href="https://www.nature.com/articles/s41586-021-03819-2">AlphaFold</a>
+  (bioinformatics and drug discovery)</li>
+</ul>
+</li>
+<li>Online Coursera - <a href="https://info.deeplearning.ai/machine-learning-yearning-book">Machine Learning
+  Yearning</a> by
+  Andrew Ng</li>
+<li>O'Reilly Book with examples for common ML approaches, not specific to
+  Foundation Models - <a href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646">Hands-on Machine Learning with Scikit-Learn, Keras, and
+  TensorFlow</a>,
+  by Aurelien Geron</li>
+<li><a href="https://developer.nvidia.com/join-nvidia-developer-program">NVIDIA Deep Learning Institute online
+  courses</a></li>
+<li>Concise book on many valuable concepts in Machine Learning - <a href="https://www.amazon.com/Hundred-Page-Machine-Learning-Book/dp/199957950X">The Hundred-Page
+  Machine Learning
+  Book</a>
+  by Andriy Burkov</li>
+<li>O'Reilly Book with examples for evaluation metrics - <a href="https://www.oreilly.com/content/evaluating-machine-learning-models/">Evaluating Machine
+  Learning
+  Models</a>
+  by Alice Zheng</li>
+<li>Online Coursera - "<a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning
+  Specialization</a>"
+  by Stanford instructors</li>
+<li>Online Coursera - "<a href="https://www.coursera.org/specializations/natural-language-processing">Natural Language Processing
+  Specialization</a>"</li>
+<li>Online Coursera - "<a href="https://www.coursera.org/specializations/deep-learning">Deep Learning
+  Specialization</a>" by
+  Andrew Ng</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
